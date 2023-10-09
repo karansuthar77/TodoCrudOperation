@@ -1,0 +1,3 @@
+SELECT c.coupon_code as couponCodec.created_by as createdBy
+		c.created_on as createdOn, c.employee_id as employeeId	FROM	coupon c
+	WHERE coupon_id = ?1 AND is_deleted=0
