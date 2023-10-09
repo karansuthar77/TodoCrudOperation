@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Javascript tutorial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 2px solid red;
+            margin: 3px o;
+            background: lightblue;
+            padding: 9px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>welcome to Javascript tutorial</h1>
+    <div class="container" id="first">
+        <p>this is container class</p>
+        <button onclick="myFunction()">
+            <div id="btn">click me</div>
+        </button>
+        <div id="second">aana chahiye</div>
+
+    </div>
+    <button onclick="startCount()">Start count!</button>
+    <input type="text" id="demo">
+    <button onclick="stopCount()">Stop count!</button>
+    
+
+
+</body>
+<script>
+    console.log("Hello world");
+    alert("oy..kya KAR raha he")
+    let elem = document.getElementById('btn');
+    console.log(elem);
+    let elemclass = document.getElementsByClassName("container");
+    console.log(elemclass);
+    elemclass[0].style.background = "yellow";
+    function clicked() {
+        console.log("the button Was clicked")
+    }
+
+    tn = document.getElementsByTagName('div');
+    console.log(tn);
+    // createdelement=document.createElement('p');
+    // createdelement.innertext="this is a pargraph";
+    // tn[0].appendChild('createdelement');
+    window.onload = function () {
+        console.log('the document was loaded')
+    }
+    //   <button onclick="myFunction()">Click me</button>
+
+    // <p id="demo"></p>
+
+
+    // function sum(a,b) {
+    //     return a+b;
+    //  }
+    sum = (a, b) => {
+        return a + b;
+    }
+    first.addEventListener('mouseover', function () {
+        console.log("mouse on container")
+    })
+    first.addEventListener('mouseout', function () {
+        console.log("mouuse out from the container")
+    })
+    let prev = document.getElementById("second").innerHTML;
+    first.addEventListener('mouseup', function () {
+        document.getElementById("second").innerHTML = prev; 
+        console.log("mouse up on container")
+    })
+
+    first.addEventListener('mousedown', function () {
+        document.getElementById("second").innerHTML = "we have clicked";
+        console.log("mouse down on container")
+    })
+    logkaro = () => {
+        console.log("i am your log")
+    }
+    // settimeout and setinterval:
+    setTimeout(logkaro, 1000);
+    setInterval(() => {
+
+        console.log("hi kese ho");
+
+    }, 2000);
+    // const myWindow = window.open("", "", "width=200, height=100");
+    // setTimeout(function () { myWindow.close() }, 3000);
+
+    let counter = 0;
+    let timeout;
+    let timer_on = 0;
+
+    function timedCount() { 
+        document.getElementById("demo").value = counter;
+        counter++;
+        timeout = setTimeout(timedCount, 1000);
+    }
+
+    function startCount() {
+        if (!timer_on) {
+            timer_on = 1;
+            timedCount();
+        }
+    }
+
+    function stopCount() {
+        clearTimeout(timeout);
+        timer_on = 0;
+    }
+    // localStorage.setItem("name","karan");
+
+
+
+</Script>
+
+
+<script src="index.js"></script>
+
+</html>

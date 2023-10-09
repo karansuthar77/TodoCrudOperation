@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ko"></div>
+        <p style="background-color:#ff0000" >The background-color of this paragraph is red.</p>  
+        <p style="background-color:#00ff00">The background-color of this paragraph is green.</p>  
+        <p style="background-color:#0000ff">The background-color of this paragraph is blue.</p>  </div>
+        <button id="cs">css</button>
+        <button id="jk">before</button> 
+        <button id="btn2">Prepend list item</button>   
+        <button id="hm">after</button>
+        <button id="qw">iafter</button>
+        <button id="xx">append</button>
+        <button id="pp">clone</button>
+        <button id="qq">remove</button>
+        <button id="eq">empty</button>
+        <button id="ip">detach</button>
+<button id="btn1">Prepend text</button>  
+<p id="jl">This is the first paragraph.</p>    
+<p>This is the second paragraph.</p>     
+<div style="height:150px;background-color:yellow" id="po">  
+    Twinkle, twinkle, little star,<br/>  
+    How I wonder what you are!</br>  
+    Up above the world so high,<br/>  
+    Like a diamond in the sky.<br/>  
+    Twinkle, twinkle, little star,<br/>  
+    How I wonder what you are!<br/>  
+    <p><b>This poem is written inside the div.</b></p>  
+    </div>  
+<p id="ui">This is a training institute.</p>  
+
+<ol>  
+    <li>Item no.1</li>  
+    <li>Item no.2</li>  
+    <li>Item no.3</li>  
+  </ol>  
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script>
+    $(document).ready(function(){
+        $("#cs").click(function(){ 
+             $(".ko").css("background-color","violet");     })
+             $("#jk").click(function(){
+                $("#po").before("<p> hello! this is karan</p>");
+             })
+            $("#btn1").click(function(){
+                $("#jl").prepend("title:");
+
+
+            })
+            $("#xx").click(function(){
+                $("ol").append("<li>:end</li>");
+
+
+            })
+            $("#btn2").click(function(){
+                $("ol").prepend("<li>itemList</li>");
+            })
+            $("#hm").click(function(){
+                $("#po").after("<p> bas kar liya na tamasha</P>")
+            })
+            $("#qw").click(function(){
+                $("<span><b>Hello javatpoint.com</b></span>").insertAfter("p");  
+            })
+            $("#pp").click(function(){
+                $("#jl").clone().appendTo("body");
+            })
+            $("#qq").click(function(){
+            $("#jl").remove();
+            })
+            $("#eq").click(function(){
+            $("#po").empty();
+            })
+            $("#ip").click(function(){
+            $("#ui").detach();
+            })
+    })
+
+</script>
+</html>

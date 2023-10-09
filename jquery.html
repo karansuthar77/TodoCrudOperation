@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script>
+    $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+                            }) ;    
+            $("#show").click(function(){
+                $("p").show();
+            }) 
+            $("button").click(function(){
+                $("p").toggle();
+            })       
+            $("#fade").click(function(){
+                $("#div1").fadeIn("slow");
+                $("#div2").fadeIn();
+                $("#div3").fadeIn(2000);
+            })  
+            $("#fadeo").click(function(){
+                $("#div1").fadeOut("slow");
+                $("#div2").fadeOut();
+                $("#div3").fadeOut(2000);
+            })  
+            $("#fadeto").click(function(){
+                $("#div1").fadeToggle("slow");
+                $("#div2").fadeToggle();
+                $("#div3").fadeToggle(2000);
+            }) 
+            $("#ka").click(function(){
+                $("#div1").fadeTo("slow", 0.3);  
+        $("#div2").fadeTo("slow", 0.4);  
+        $("#div3").fadeTo("slow", 0.5);  
+            }) 
+            $("#flip").click(function(){
+                $("#panel").slideDown();
+            })
+            $("#vi").click(function(){
+                $("#panel").slideUp();
+            })
+            $("#ln").click(function(){
+                $("#panel").slideToggle();
+            })
+        //     $('#ui').click(function(){
+        //         $("#oi").animate({left:"100px"})
+        //     })
+        //     $("#kv").click(function(){  
+        // $("#oi").delay("slow").animate({  
+        //     left: '250px',  
+        //     height: '+=150px',  
+        //     width: '+=150px'  
+        // });  
+        $("#an").click(function(){  
+        $("#kb").html("Hello <b>Javatpoint.com</b>"); 
+        
+     
+    });  
+    function displayVals() {    
+  var singleValues = $( "#single" ).val();    
+  $( "#kb" ).html( "<b>Value:</b> " + singleValues);    
+}    
+$( "select" ).change( displayVals );    
+displayVals();  
+
+function display(){
+    let multiple=$("#multiple").val();
+    $("#kp").html("<b>Value:</b>"+multiple );
+}
+$( "select" ).change( display );    
+display(); 
+    }); 
+       
+
+            
+    // });
+</script> 
+<style>   
+    #panel, #flip {  
+        padding: 5px;  
+        text-align: center;  
+        background-color: #00FFFF;  
+        border: solid 1px #c3c3c3;  
+    }  
+    #panel {  
+        padding: 50px;  
+        display: none;  
+    }  
+    </style>  
+</head>
+<body>
+   
+
+
+    <select id="single">        
+        <option>Single</option>    
+        <option>Double</option>    
+       <option>Triple</option>    
+      </select> 
+    <p id="kb"></p>
+    <select id="multiple" multiple="multiple">  
+        <option selected="selected">Multiple</option>  
+        <option>Multiple2</option>  
+        <option>Multiple3</option> 
+        <option>Multiple4</option> 
+        <option>Multiple5</option> 
+        <option>Multiple6</option>  
+      </select>
+      <p id="kp"></p>  
+    <!-- <button id="ui">Start Animation</button>  
+ 
+<div id="oi" style="background:#98bf21;height:100px;width:100px;position:absolute;">A simple animation example:</div>  <br> -->
+
+    <div id="flip">Click to slide down panel</div>  
+<div id="panel">Hello javatpoint.com!   
+It is the best tutorial website to learn jQuery and other languages.</div>  
+  <p>
+    <b>
+        this is tutorial
+    </b>
+</p>
+
+<div class="karan">hi how are you</div>
+    <br>
+    <button id="an">an</button>
+    <button id="kv">kv</button>
+    <button id="ln">ln</button>
+    <button id="vi">vi</button>
+    <button id="ka">Click to fade boxes</button><br><br> 
+    <button id="fadeto">fade toggle<br>
+    <button id="fadeo">fade out<br>
+    <button id="fade">fade in</button><br><br><br>
+    <button>Toggle</button>  <br>
+    <button id="hide">Hide</button>
+    <button id="show">show</button>
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>  
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>  
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>  
+</body>
+     
+
+</html>

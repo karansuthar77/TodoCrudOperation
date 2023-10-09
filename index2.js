@@ -1,0 +1,1 @@
+// npm host entry point
